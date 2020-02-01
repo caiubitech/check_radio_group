@@ -147,4 +147,4 @@ class _SamplePageState extends State<SamplePage> {
 ## Demo
 
 ![Radio Group](radio_sample.png)
-![Checkbox Group](check_sample.png)
+![Checkbox Group](checkbox_sample.png)
