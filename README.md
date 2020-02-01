@@ -1,7 +1,7 @@
 # Check/Radio Group
 
 
-[![Pub](https://img.shields.io/badge/pub-v0.0.4-blue)](https://pub.dev/packages/check_radio_group)
+[![Pub](https://img.shields.io/badge/pub-1.0.0-blue)](https://pub.dev/packages/check_radio_group)
 
 
 A library to easily create radio button and checkbox groups.
