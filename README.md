@@ -3,6 +3,17 @@
 
 [![Pub](https://img.shields.io/badge/pub-v0.0.4-blue)](https://pub.dev/packages/check_radio_group)
 
+
+A library to easily create radio button and checkbox groups.
+
+Define font size, selection color, position of radios / check and text alignment.
+
+
+We leave you free to customize the way you like best.
+
+Let's program!
+
+
 ## Usage
 ```dart
 import 'package:check_radio_group/check/check_group.dart';
