@@ -158,6 +158,6 @@ class _SamplePageState extends State<SamplePage> {
 ## Demo
 
 <p align="center">
-  <img src="https://github.com/caiubitech/check_radio_group/blob/master/radio_sample.png" alt="Radio button group" width="120" height="220"/>
-  <img src="https://github.com/caiubitech/check_radio_group/blob/master/checkbox_sample.png" alt="Checkbox Group" width="150"  height="220"/>
+  <img src="https://github.com/caiubitech/check_radio_group/blob/master/radio_sample.png" alt="Radio button group" width="320" height="520"/>
+  <img src="https://github.com/caiubitech/check_radio_group/blob/master/checkbox_sample.png" alt="Checkbox Group" width="320"  height="520"/>
 </p>
