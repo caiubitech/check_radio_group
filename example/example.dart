@@ -1,10 +1,4 @@
-# Check/Radio Group
 
-
-[![Pub](https://img.shields.io/badge/pub-v0.0.4-blue)](https://pub.dev/packages/check_radio_group)
-
-## Usage
-```dart
 import 'package:check_radio_group/check/check_group.dart';
 import 'package:check_radio_group/model/group_style.dart';
 import 'package:check_radio_group/model/item_group.dart';
@@ -139,12 +133,3 @@ class _SamplePageState extends State<SamplePage> {
     );
   }
 }
-
-
-```
-
-
-## Demo
-
-![Radio Group](radio_sample.png)
-![Checkbox Group](check_sample.png)

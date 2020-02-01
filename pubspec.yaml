@@ -1,6 +1,6 @@
 name: check_radio_group
 description: Custom Radio Buttom and Checkbox Group for all with simple usage.
-version: 0.0.1
+version: 0.0.3
 homepage: https://github.com/caiubitech/check_radio_group
 
 environment:

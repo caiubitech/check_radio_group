@@ -8,10 +8,7 @@ class CheckGroup extends StatefulWidget {
   final GroupStyle style;
 
   const CheckGroup(
-      {Key key,
-      @required this.items,
-      @required this.onSelected,
-      @required this.style})
+      {Key key, @required this.items, @required this.onSelected, this.style})
       : super(key: key);
 
   @override
