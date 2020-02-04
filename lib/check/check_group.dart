@@ -1,3 +1,5 @@
+library check_radio_group;
+
 import 'package:check_radio_group/model/group_style.dart';
 import 'package:check_radio_group/model/item_group.dart';
 import 'package:flutter/material.dart';
