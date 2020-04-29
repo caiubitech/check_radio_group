@@ -1,3 +1,6 @@
+// Copyright 2020 The CaiubiTech Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
 library check_radio_group;
 
 import 'package:check_radio_group/model/group_style.dart';
@@ -6,13 +9,14 @@ import 'package:flutter/material.dart';
 
 class CheckGroup extends StatefulWidget {
   final List<GroupItem> items;
-  @deprecated
-  final Function(GroupItem) onSelectedItem;
   final Function(List<GroupItem>) onSelectedItems;
   final GroupStyle style;
 
   const CheckGroup(
-      {Key key, @required this.items, @required this.onSelectedItems, this.onSelectedItem, this.style})
+      {Key key,
+      @required this.items,
+      @required this.onSelectedItems,
+      this.style})
       : super(key: key);
 
   @override
@@ -53,27 +57,23 @@ class _CheckGroupState extends State<CheckGroup> {
           ),
           subtitle: item?.subTitle != null
               ? Text(
-            item?.subTitle,
-            style: _groupStyle.titleStyle,
-            textAlign: _groupStyle.titleAlign,
-          )
+                  item?.subTitle,
+                  style: _groupStyle.titleStyle,
+                  textAlign: _groupStyle.titleAlign,
+                )
               : null,
           onChanged: (value) {
             setState(() {
               item.selected = value;
 
-              if(!item.selected) {
-                _selectedItems.removeWhere((value) => value.hashCode == item.hashCode);
+              if (!item.selected) {
+                _selectedItems
+                    .removeWhere((value) => value.hashCode == item.hashCode);
               } else {
                 _selectedItems.add(item);
               }
 
               widget.onSelectedItems(_selectedItems);
-
-              if(widget.onSelectedItem != null) {
-                widget?.onSelectedItem(item);
-              }
-
             });
           },
           key: Key('$pos'),

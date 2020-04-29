@@ -107,11 +107,7 @@ class _SamplePageState extends State<SamplePage> {
               items: radioItems,
               onSelectedItems: (items) {
                 items.forEach((item) => print(item.title));
-              },
-                //deprecated
-                onSelectedItem: (item) {
-                  print(item.title);
-                }
+              }
             ),
             SizedBox(
               height: 32,
@@ -129,10 +125,6 @@ class _SamplePageState extends State<SamplePage> {
                   titleStyle: TextStyle(fontSize: 12)),
               onSelectedItems: (items) {
                 items.forEach((item) => print(item.title));
-              },
-              //deprecated
-              onSelectedItem: (item) {
-                print(item.title);
               }
             ),
           ],

@@ -1,7 +1,6 @@
 name: check_radio_group
 description: Custom Radio Buttom and Checkbox Group for all with simple usage.
-version: 2.0.0
-author: Bruno Santiago -> Caiubitech
+version: 2.0.2
 homepage: https://github.com/caiubitech/check_radio_group
 
 environment:
@@ -9,10 +8,6 @@ environment:
 
 dependencies:
   flutter:
-    sdk: flutter
-
-dev_dependencies:
-  flutter_test:
     sdk: flutter
 
 flutter:
