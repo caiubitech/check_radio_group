@@ -1,7 +1,7 @@
 # Check/Radio Group
 
 
-[![Pub](https://img.shields.io/badge/pub-1.0.0-blue)](https://pub.dev/packages/check_radio_group)
+[![Pub](https://img.shields.io/badge/pub-v2.0.0-green)](https://pub.dev/packages/check_radio_group)
 
 
 A library to easily create radio button and checkbox groups.
@@ -13,6 +13,13 @@ We leave you free to customize the way you like best.
 
 Let's program!
 
+## Getting Started #
+
+In the dependencies: section of your pubspec.yaml, add the following line:
+
+```dart
+  check_radio_group: 2.0.0
+```
 
 ## Usage
 ```dart

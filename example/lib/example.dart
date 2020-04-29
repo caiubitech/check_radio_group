@@ -105,9 +105,13 @@ class _SamplePageState extends State<SamplePage> {
             _titleWidget('Default Check Group'),
             CheckGroup(
               items: radioItems,
-              onSelected: (item) {
-                print(item.title);
+              onSelectedItems: (items) {
+                items.forEach((item) => print(item.title));
               },
+                //deprecated
+                onSelectedItem: (item) {
+                  print(item.title);
+                }
             ),
             SizedBox(
               height: 32,
@@ -123,9 +127,13 @@ class _SamplePageState extends State<SamplePage> {
                   checkPosition: ListTileControlAffinity.leading,
                   titleAlign: TextAlign.left,
                   titleStyle: TextStyle(fontSize: 12)),
-              onSelected: (item) {
-                print(item.title);
+              onSelectedItems: (items) {
+                items.forEach((item) => print(item.title));
               },
+              //deprecated
+              onSelectedItem: (item) {
+                print(item.title);
+              }
             ),
           ],
         ),

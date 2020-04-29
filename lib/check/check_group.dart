@@ -6,11 +6,13 @@ import 'package:flutter/material.dart';
 
 class CheckGroup extends StatefulWidget {
   final List<GroupItem> items;
-  final Function(GroupItem) onSelected;
+  @deprecated
+  final Function(GroupItem) onSelectedItem;
+  final Function(List<GroupItem>) onSelectedItems;
   final GroupStyle style;
 
   const CheckGroup(
-      {Key key, @required this.items, @required this.onSelected, this.style})
+      {Key key, @required this.items, @required this.onSelectedItems, this.onSelectedItem, this.style})
       : super(key: key);
 
   @override
@@ -19,6 +21,8 @@ class CheckGroup extends StatefulWidget {
 
 class _CheckGroupState extends State<CheckGroup> {
   GroupStyle _groupStyle;
+
+  List<GroupItem> _selectedItems = [];
 
   @override
   void initState() {
@@ -49,15 +53,27 @@ class _CheckGroupState extends State<CheckGroup> {
           ),
           subtitle: item?.subTitle != null
               ? Text(
-                  item?.subTitle,
-                  style: _groupStyle.titleStyle,
-                  textAlign: _groupStyle.titleAlign,
-                )
+            item?.subTitle,
+            style: _groupStyle.titleStyle,
+            textAlign: _groupStyle.titleAlign,
+          )
               : null,
           onChanged: (value) {
             setState(() {
               item.selected = value;
-              widget.onSelected(item);
+
+              if(!item.selected) {
+                _selectedItems.removeWhere((value) => value.hashCode == item.hashCode);
+              } else {
+                _selectedItems.add(item);
+              }
+
+              widget.onSelectedItems(_selectedItems);
+
+              if(widget.onSelectedItem != null) {
+                widget?.onSelectedItem(item);
+              }
+
             });
           },
           key: Key('$pos'),
